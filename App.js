@@ -1,10 +1,10 @@
-import React from 'react';
-import Navigation from './React-Router/Navigation';
+import React from 'react'
+import "./App.css"
+import EnhancedComponent from './React-Hoc/Hoc';
 
-function App() {
-  return <div>
-  <Navigation />
-  </div>;
+const App =({show, handleclick})=> {
+	return <button onClick={handleclick}>{show}</button>
 }
 
-export default App;
+
+export default EnhancedComponent(App);
